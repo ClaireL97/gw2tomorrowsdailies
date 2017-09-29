@@ -1,10 +1,12 @@
+<?php include "./static/includes/header.php";?>
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title></title>
 </head>
 <body>
-
+<h1>Tomorrows Dailies</h1>
 <?php
 
 $dailies = json_decode(file_get_contents("https://api.guildwars2.com/v2/achievements/daily/tomorrow"));
@@ -27,6 +29,11 @@ unset($allAchieves); // just so we know, we aren't using this anymore!
 //
 ?>
 <table>
+<thead>
+<th> Name </th>
+<th> Requirement </th>
+<th> Description </th>
+</thead>
 <?php foreach ($dailies as $gamemode) { ?>
 	<tr>
 	<?php foreach($gamemode as $daily) { ?>
@@ -42,7 +49,7 @@ unset($allAchieves); // just so we know, we aren't using this anymore!
 
 </body>
 </html>
-
+<?php include "./static/includes/footer.php";?>
 	<!-- /*
 	Things to display
 	Name, Requirement, Description

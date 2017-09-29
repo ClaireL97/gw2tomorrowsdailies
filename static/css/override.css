@@ -1,0 +1,9 @@
+.bl {
+	border-left: 2px ridge black;
+}
+.br {
+	border-right: 2px ridge black;
+}
+.bb {
+	border-bottom: 2px ridge black;
+}
