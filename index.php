@@ -28,85 +28,115 @@ foreach ($allAchieves as $achieve) {
 unset($allAchieves); // just so we know, we aren't using this anymore!
 //
 ?>
-<div style="border:1px solid black; width:600px;height:600px;overflow:scroll;">
-	<table class="table table-bordered table-striped">
-	<thead>
-	<th> Name </th>
-	<th> Requirement </th>
-	<th> Description </th>
-	<!-- <th> Required Access</th> -->
-	</thead>
-		<?php foreach($dailies->pve as $daily) { ?>
-		<tr>
-			<tr>
-				<td> <?= $achievesArray[$daily->id]->name ?> </td>
-				<td> <?= $achievesArray[$daily->id]->requirement ?> </td>
-				<td> <?= $achievesArray[$daily->id]->description ?> </td>
-				<!-- <td> <?php print_r($daily->required_access); ?> </td>  -->
-			</tr>
-		</tr>
-	<?php } ?>
-	</table>
+
+<div class="widget-box collapsible">
+	<div class="widget-title"> <a href="#collapseOne" data-toggle="collapse"> <span class="icon"><i class="icon-arrow-right"></i></span>
+		<h5>WvW Dailies</h5>
+	</a></div>
+	<div class="collapse in" id="collapseOne">
+		<div class="widget-content span12">
+			<table class="table table-bordered table-striped">
+			<thead>
+			<th> Name </th>
+			<th> Requirement </th>
+			<th> Description </th>
+			<!-- <th> Required Access</th> -->
+			</thead>
+				<?php foreach($dailies->wvw as $daily) { ?>
+				<tr>
+					<tr>
+						<td> <?= $achievesArray[$daily->id]->name ?> </td>
+						<td> <?= $achievesArray[$daily->id]->requirement ?> </td>
+						<td> <?= $achievesArray[$daily->id]->description ?> </td>
+						<!-- <td> <?php print_r($daily->required_access); ?> </td>  -->
+					</tr>
+				</tr>
+			<?php } ?>
+			</table>
+		</div>
+	</div>
 </div>
-<div style="border:1px solid black; width:600px;height:600px;overflow:scroll;">
-	<table class="table table-bordered table-striped">
-	<thead>
-	<th> Name </th>
-	<th> Requirement </th>
-	<th> Description </th>
-	<!-- <th> Required Access</th> -->
-	</thead>
-		<?php foreach($dailies->wvw as $daily) { ?>
-		<tr>
-			<tr>
-				<td> <?= $achievesArray[$daily->id]->name ?> </td>
-				<td> <?= $achievesArray[$daily->id]->requirement ?> </td>
-				<td> <?= $achievesArray[$daily->id]->description ?> </td>
-				<!-- <td> <?php print_r($daily->required_access); ?> </td>  -->
-			</tr>
-		</tr>
-	<?php } ?>
-	</table>
+
+<div class="widget-box collapsible">
+	<div class="widget-title"> <a href="#collapseTwo" data-toggle="collapse"> <span class="icon"><i class="icon-arrow-right"></i></span>
+		<h5>PvP Dailies</h5>
+	</a></div>
+	<div class="collapse in" id="collapseTwo">
+		<div class="widget-content span12">
+			<table class="table table-bordered table-striped">
+			<thead>
+			<th> Name </th>
+			<th> Requirement </th>
+			<th> Description </th>
+			<!-- <th> Required Access</th> -->
+			</thead>
+				<?php foreach($dailies->pvp as $daily) { ?>
+				<tr>
+					<tr>
+						<td> <?= $achievesArray[$daily->id]->name ?> </td>
+						<td> <?= $achievesArray[$daily->id]->requirement ?> </td>
+						<td> <?= $achievesArray[$daily->id]->description ?> </td>
+						<!-- <td> <?php print_r($daily->required_access); ?> </td>  -->
+					</tr>
+				</tr>
+			<?php } ?>
+			</table>
+		</div>
+	</div>
 </div>
-<div style="border:1px solid black; width:600px;height:600px;overflow:scroll;">
-	<table class="table table-bordered table-striped">
-	<thead>
-	<th> Name </th>
-	<th> Requirement </th>
-	<th> Description </th>
-	<!-- <th> Required Access</th> -->
-	</thead>
-		<?php foreach($dailies->pvp as $daily) { ?>
-		<tr>
-			<tr>
-				<td> <?= $achievesArray[$daily->id]->name ?> </td>
-				<td> <?= $achievesArray[$daily->id]->requirement ?> </td>
-				<td> <?= $achievesArray[$daily->id]->description ?> </td>
-				<!-- <td> <?php print_r($daily->required_access); ?> </td>  -->
-			</tr>
-		</tr>
-	<?php } ?>
-	</table>
+<div class="widget-box collapsible">
+	<div class="widget-title"> <a href="#collapsThree" data-toggle="collapse"> <span class="icon"><i class="icon-arrow-right"></i></span>
+		<h5>PvE Dailies</h5>
+	</a></div>
+	<div class="collapse in" id="collapsThree">
+		<div class="widget-content span12">
+			<table class="table table-bordered table-striped">
+			<thead>
+			<th> Name </th>
+			<th> Requirement </th>
+			<th> Description </th>
+			<!-- <th> Required Access</th> -->
+			</thead>
+				<?php foreach($dailies->pve as $daily) { ?>
+				<tr>
+					<tr>
+						<td> <?= $achievesArray[$daily->id]->name ?> </td>
+						<td> <?= $achievesArray[$daily->id]->requirement ?> </td>
+						<td> <?= $achievesArray[$daily->id]->description ?> </td>
+						<!-- <td> <?php print_r($daily->required_access); ?> </td>  -->
+					</tr>
+				</tr>
+			<?php } ?>
+			</table>
+		</div>
+	</div>
 </div>
-<div style="border:1px solid black; width:600px;height:600px;overflow:scroll;">
-	<table class="table table-bordered table-striped">
-	<thead>
-	<th> Name </th>
-	<th> Requirement </th>
-	<th> Description </th>
-	<!-- <th> Required Access</th> -->
-	</thead>
-		<?php foreach($dailies->fractals as $daily) { ?>
-		<tr>
-			<tr>
-				<td> <?= $achievesArray[$daily->id]->name ?> </td>
-				<td> <?= $achievesArray[$daily->id]->requirement ?> </td>
-				<td> <?= $achievesArray[$daily->id]->description ?> </td>
-				<!-- <td> <?php print_r($daily->required_access); ?> </td>  -->
-			</tr>
-		</tr>
-	<?php } ?>
-	</table>
+<div class="widget-box collapsible">
+	<div class="widget-title"> <a href="#collapseFour" data-toggle="collapse"> <span class="icon"><i class="icon-arrow-right"></i></span>
+		<h5>Fractal Dailies</h5>
+	</a></div>
+	<div class="collapse in" id="collapseFour">
+		<div class="widget-content span12">
+			<table class="table table-bordered table-striped">
+			<thead>
+			<th> Name </th>
+			<th> Requirement </th>
+			<th> Description </th>
+			<!-- <th> Required Access</th> -->
+			</thead>
+				<?php foreach($dailies->fractals as $daily) { ?>
+				<tr>
+					<tr>
+						<td> <?= $achievesArray[$daily->id]->name ?> </td>
+						<td> <?= $achievesArray[$daily->id]->requirement ?> </td>
+						<td> <?= $achievesArray[$daily->id]->description ?> </td>
+						<!-- <td> <?php print_r($daily->required_access); ?> </td>  -->
+					</tr>
+				</tr>
+			<?php } ?>
+			</table>
+		</div>
+	</div>
 </div>
 </body>
 </html>
